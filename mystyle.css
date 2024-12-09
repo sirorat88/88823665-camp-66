@@ -1,0 +1,82 @@
+body {
+    font-family: Lato, Open Sans;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ec518a;
+    text-align: center; /* กึ่งกลาง */
+    padding: 7px; /* เว้นระยะภายในกรอบ */
+    border: 3px solid #ec518a; /* สีขอบ */
+    border-radius: 80px; /* มุมโค้งมน */
+    background-color: #d7f419; 
+    display: inline-block; /* ทำให้กรอบกระชับกับข้อความ */
+    text-shadow: 3px 3px 5px rgba(246, 217, 245, 0.829); /*x y blur color*/
+}
+
+h1:hover{
+    border: 3px solid #d7f419;
+    background-color: #ec518a; 
+    color: #d7f419;
+    text-shadow: 3px 3px 5px rgba(102, 89, 102, 0.829); /*x y blur color*/
+    cursor: pointer;
+}
+
+form {
+    margin: 0;
+    padding: 0px;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #ec518a(212, 100%, 93%);
+    margin-right: 145px;
+    margin-bottom: 20px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+button:active{
+     border-color: darkmagenta;
+}
+button {
+    background-color: #aac116;
+    border-color: beige;
+    color: antiquewhite;
+}
+
+button:hover {
+    background-color: #ec518a;
+    color: #aac116;
+}
+
+input:hover, textarea:hover {
+    background: #ec518a;; 
+    border-color:rgb(250, 224, 26);
+    font-style: italic;
+    
+}
+input:hover, textarea:hover {
+    color: rgb(222, 234, 189); 
+}
+
+input, textarea {
+    transition: background-color 0.5s ease; /*เปลี่ยนสีตอนกรอก*/
+}
+
+input:focus, textarea:focus {
+    background-color: #aac116; /* ตอนกรอกข้อมูล */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+

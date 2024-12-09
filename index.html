@@ -1,178 +1,105 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
         <title>Workshop #HTML</title>
-        <meta charset="UTF-8" /> 
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
-            form {
-                margin: 0;
-                padding: 0px;
-            }
-            label {
-                margin-bottom: 100px;
-                margin-right: 0px;
-    
-            }
-            input, select{
-                margin: 1px 100 10px;
-                margin-top: 7px;
-            }
-            textarea{
-                flex: 1;
-                padding: 8px;
-                margin-top: -80px;
-                
-            }
-            button {
-                background-color: hsl(212, 100%, 93%);
-                margin-right: 145px;
-                margin-bottom: 20px;
-                margin-top: 18px;
-                cursor: pointer;
-            }
-            div {
-                margin-top: -10px ;
-            }
-            .button-group {
-            display: flex;
-            justify-content: flex-start;
-            gap: 10px;
-        }
-        button:active{
-            background-color: #200964;
-            color: blanchedalmond;
-        }
-        .button-group {
-            display: flex;
-            gap: 10px;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-        }
-        .error-message {
-            color: red;
-            font-size: 14px;
-            margin-top: 10px;
-            display: none;
-        }
-            
-            
-            
-    </style>
+            <link rel="stylesheet" href="mystyle.css" />
     </head>
-
     <body>
-        <p style="line-height: 20px;">
-        <h1 style="color: darkblue;">Workshop #HTML - FORM</h1>
-        
-        </p>
-
+        <h1>Workshop #HTML - FORM</h1>
         <form id="myForm">
-           
-            <label for="fname">ชื่อ&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;</label>
-                <input id="lname" type="text"
-                autofocus ="autofocus"
-                placeholder = "กรุณาป้อนชื่อ" required/><br>
-           
-            
-            
-            <label for="lname">สกุล&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;</label>
-                <input id="lname" type="text" 
-                autofocus ="autofocus"
-                placeholder = "กรุณาป้อนนามกุล" required/><br>
-            
-
-            <label for="BirthDate"> วัน/เดือน/ปีเกิด&ensp;</label>
-                <input  id="BirthDate" type="date" name="Age" required><br>
-           
-
-            <label for="Age"> อายุ&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp; </label>
-                <input  id="Age" type="number"
-                autofocus ="autofocus"
-                placeholder = "กรุณาป้อนอายุ" required min="0" step="1"/><br><p>
-                    
-                    
-            <div>
-                เพศ&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;
-                <input type="radio" id="male" name="gender" value="Male" required>
-                    <label for="Male">ชาย</label>
-                <input type="radio" id="female" name="gender" value="Female">
-                    <label for="Female">หญิง</label><br>
+            <table>
+                <tr>
+                    <td><label for="fname">ชื่อ</label></td>
+                    <td><input id="fname" type="text" placeholder="กรุณาป้อนชื่อ" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">สกุล</label></td>
+                    <td><input id="lname" type="text" placeholder="กรุณาป้อนนามกุล" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="BirthDate">วัน/เดือน/ปีเกิด</label></td>
+                    <td><input id="BirthDate" type="date" required /><br></td>
+                </tr>
+                <tr>
+                    <td><label for="Age">อายุ</label></td>
+                    <td><input id="Age" type="number" placeholder="กรุณาป้อนอายุ" required min="0" step="1" /><br></td>
+                </tr>
+                <tr>
+                    <td>เพศ</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Male" required />
+                        <label for="male">ชาย</label>
+                        <input type="radio" id="female" name="gender" value="Female" />
+                        <label for="female">หญิง</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="myFile">รูป</label></td>
+                    <td><input type="file" id="myFile" accept="image/*" multiple /></td>
+                </tr>
+                <tr>
+                    <td><label for="Address">ที่อยู่</label></td>
+                    <td><textarea id="Address" rows="4" cols="22" placeholder="กรุณาป้อนที่อยู่" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>สีที่ชอบ</td>
+                    <td>
+                        <select name="Colors" required>
+                            <option value="Red" style="color: red;">สีแดง</option>
+                            <option value="Blue" style="color: blue;" >สีน้ำเงิน</option>
+                            <option value="Green" style="color: green;" >สีเขียว</option>
+                            <option value="Yellow" style="color: yellow;">สีเหลือง</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>แนวเพลงที่ชอบ</td>
+                    <td>
+                        <input type="radio" id="type_music1" name="music" value="เพื่อชีวิต" required />
+                        <label for="type_music1">เพื่อชีวิต</label>
+                        <input type="radio" id="type_music2" name="music" value="ลูกทุ่ง" />
+                        <label for="type_music2">ลูกทุ่ง</label>
+                        <input type="radio" id="type_music3" name="music" value="อื่นๆ" />
+                        <label for="type_music3">อื่นๆ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br>
+                        <input type="checkbox" id="accept" name="accept" value="Accept" required />
+                        <label for="accept">ยินยอมให้เก็บข้อมูล</label>
+                    </td>
+                </tr>
+            </table>
+            <div class="button-group">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
             </div>
-    
-    
-        <label for="myFile" >รูป &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</label>
-        
-            <input type="file" id="myFile"
-                    accept="image/*" multiple/><br>
-                    
-            <br><br>
-            <label for="Address"> ที่อยู่&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp; </label>
-                <p style="margin-bottom: 20px;"></p>
+            <div id="error-message" class="error-message">
+                กรุณากรอกข้อมูลให้ครบถ้วนทุกช่อง
+            </div>
+        </form>
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                let isValid = true;
+                const errorMessage = document.getElementById("error-message");
+                const requiredFields = document.querySelectorAll(
+                    "input[required], select[required], textarea[required]"
+                );
 
-            
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
-            
-                    <textarea rows="4" cols="22"  placeholder="กรุณาป้อนที่อยู่" required></textarea><br>
-                  
-    
-    สีที่ชอบ&emsp;&emsp;&emsp;&ensp;
-        <select name="Colors" required>
-            
-            <option value="Red" selected = "selected">สีเหลือง</option>
-            <option value="Blue" selected = "selected">สีน้ำเงิน</option>
-            <option value="Green"  selected = "selected">สีเขียว</option>
-            <option value="Yellow"  selected = "selected">สีแดง</option><br>
-        </select><br>
+                requiredFields.forEach(function (field) {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                    }
+                });
 
-    แนวเพลงที่ชอบ&nbsp;
-        <input type="radio" id="type_music" name="music" value="Male" required>
-            <label for="Male">เพื่อชีวิต</label>
-        <input type="radio" id="type_music" name="music" value="Female">
-            <label for="Female">ลูกทุ่ง</label>
-        <input type="radio" id="type_music" name="music" value="Female">
-            <label for="Female">อื่นๆ</label><br>
-    
-        <p>
-        <input type="checkbox" id="accept" name="accept" value="Accept" required>
-            <label for="accept"> ยินยอมให้เก็บข้อมูล </label><br>
-        </p>
-        
-        <div class="button-group">
-            <button type="reset" >Reset</button>
-            <button type="submit" >Submit</button><br> 
-        </div>
-
-        <div
-            id = error-message class="error-message">
-            กรุณากรอกข้อมูลให้ครบถ้วนทุกช่อง
-        </div>
-    </form>
-    <script>
-        
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            let isValid = true;
-            const errorMessage = document.getElementById("error-message");
-            
-            const requiredFields = document.querySelectorAll("input[required], select[required], textarea[required]");
-            requiredFields.forEach(function (field) {
-                if (!field.value.trim()) {
-                    isValid = false;
+                if (!isValid) {
+                    errorMessage.style.display = "block"; // แสดงข้อความแจ้งเตือน
+                    event.preventDefault(); // ป้องกันการส่งฟอร์ม
+                } else {
+                    errorMessage.style.display = "none"; // ซ่อนข้อความแจ้งเตือน
                 }
             });
-
-            if (!isValid) {
-                errorMessage.style.display = "block"; // แสดงข้อความแจ้งเตือน
-                event.preventDefault(); // ป้องกันการส่งฟอร์ม
-            } else {
-                errorMessage.style.display = "none"; // ซ่อนข้อความแจ้งเตือน
-            }
-        });
-    </script>
+        </script>
     </body>
-</div>
 </html>
