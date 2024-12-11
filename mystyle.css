@@ -1,23 +1,25 @@
 body {
-    font-family: Lato, Open Sans;
+        
+        font-family: 'Kanit', Mali;
+
 }
 
 h1 {
     font-size: 36px;
-    color: #ec518a;
+    color: #006ebc;
     text-align: center; /* กึ่งกลาง */
     padding: 7px; /* เว้นระยะภายในกรอบ */
-    border: 3px solid #ec518a; /* สีขอบ */
-    border-radius: 80px; /* มุมโค้งมน */
-    background-color: #d7f419; 
-    display: inline-block; /* ทำให้กรอบกระชับกับข้อความ */
-    text-shadow: 3px 3px 5px rgba(246, 217, 245, 0.829); /*x y blur color*/
+    border: 3px solid #006ebc; 
+    border-radius: 80px; /* มุมมน */
+    background-color: #f1dd6a; 
+    display: inline-block; /* กรอบพอดีกับข้อความ */
+    text-shadow: 3px 3px 5px rgba(48, 44, 48, 0.829); /*x y blur color*/
 }
 
 h1:hover{
-    border: 3px solid #d7f419;
-    background-color: #ec518a; 
-    color: #d7f419;
+    border: 3px solid #f1dd6a;
+    background-color: #072f4b; 
+    color: #f1dd6a;
     text-shadow: 3px 3px 5px rgba(102, 89, 102, 0.829); /*x y blur color*/
     cursor: pointer;
 }
@@ -29,7 +31,7 @@ form {
 }
 
 button {
-    background-color: #ec518a(212, 100%, 93%);
+    background-color: #006ebc;
     margin-right: 145px;
     margin-bottom: 20px;
     margin-top: 18px;
@@ -37,22 +39,22 @@ button {
 }
 
 button:active{
-     border-color: darkmagenta;
+     border-color: #006ebc;
 }
 button {
-    background-color: #aac116;
+    background-color: #f1dd6a;
     border-color: beige;
     color: antiquewhite;
 }
 
 button:hover {
-    background-color: #ec518a;
-    color: #aac116;
+    background-color: #006ebc;
+    color: #f1dd6a;
 }
 
 input:hover, textarea:hover {
-    background: #ec518a;; 
-    border-color:rgb(250, 224, 26);
+    background: #006ebc;; 
+    border-color:#f1dd6a;
     font-style: italic;
     
 }
@@ -61,11 +63,11 @@ input:hover, textarea:hover {
 }
 
 input, textarea {
-    transition: background-color 0.5s ease; /*เปลี่ยนสีตอนกรอก*/
+    transition: background-color 0.8s ease; /*เปลี่ยนสีตอนกรอก*/
 }
 
 input:focus, textarea:focus {
-    background-color: #aac116; /* ตอนกรอกข้อมูล */
+    background-color: #f1dd6a; /* ตอนกรอกข้อมูล */
 }
 
 .button-group {

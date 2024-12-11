@@ -3,11 +3,69 @@
     <head>
         <meta charset="UTF-8" />
         <title>Workshop #HTML</title>
+
+        <link href="link rel="preconnect href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="mystyle.css" />
+<style>
+    body {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; /*แนวตั้ง*/
+        align-items: center; /*แนวนอน*/
+        height: 100vh;
+        margin: 0; 
+        background-color: #006ebc; 
+        font-family: 'Kanit';
+    }
+    h1 {
+        color: #006ebc;
+        margin-bottom: 20px;
+    }
+    form {
+        background-color: rgb(253, 251, 232); /* พื้นหลังสีขาว */
+        padding: 20px; /* ระยะขอบภายใน */
+        border: 8px solid #ffd726; /* เส้นขอบสีน้ำเงิน */
+        border-radius: 10px; /* ขอบมน */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+        min-width: 300px; /* ความกว้างขั้นต่ำ */
+    }
+    input[type="checkbox"],
+            input[type="radio"] {
+                accent-color: #b37400;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+            input[type="checkbox"]:hover, /* hover */
+            input[type="radio"]:hover {
+                accent-color: #b37400; 
+            }
+            button {
+                background-color: #23cb5b;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            button:hover {
+                background-color: #147149;
+            }
+            button[type="reset"] {
+                background-color: #a8a8a8;
+            }
+            button[type="reset"]:hover {
+                background-color: #484848;
+            }
+</style>
     </head>
     <body>
         <h1>Workshop #HTML - FORM</h1>
         <form id="myForm">
+            
             <table>
                 <tr>
                     <td><label for="fname">ชื่อ</label></td>
