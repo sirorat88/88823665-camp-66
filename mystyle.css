@@ -1,24 +1,22 @@
 body {
-        
-        font-family: 'Kanit', Mali;
-
+        font-family: 'Kanit';
 }
 
 h1 {
     font-size: 36px;
-    color: #006ebc;
+    color: #023960;
     text-align: center; /* กึ่งกลาง */
     padding: 7px; /* เว้นระยะภายในกรอบ */
-    border: 3px solid #006ebc; 
+    border: 4px solid #0e446b; 
     border-radius: 80px; /* มุมมน */
     background-color: #f1dd6a; 
     display: inline-block; /* กรอบพอดีกับข้อความ */
-    text-shadow: 3px 3px 5px rgba(48, 44, 48, 0.829); /*x y blur color*/
+    text-shadow: 3px 3px 5px rgba(251, 252, 255, 0.829); /*x y blur color*/
 }
 
 h1:hover{
     border: 3px solid #f1dd6a;
-    background-color: #072f4b; 
+    background-color: #0c5081; 
     color: #f1dd6a;
     text-shadow: 3px 3px 5px rgba(102, 89, 102, 0.829); /*x y blur color*/
     cursor: pointer;
@@ -53,13 +51,13 @@ button:hover {
 }
 
 input:hover, textarea:hover {
-    background: #006ebc;; 
+    background: #9d9046;; 
     border-color:#f1dd6a;
     font-style: italic;
     
 }
 input:hover, textarea:hover {
-    color: rgb(222, 234, 189); 
+    color: rgb(77, 82, 65); 
 }
 
 input, textarea {
