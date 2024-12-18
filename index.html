@@ -3,90 +3,217 @@
     <head>
         <meta charset="UTF-8" />
         <title>Workshop #HTML</title>
-            <link rel="stylesheet" href="mystyle.css" />
+
+        <link href="link rel="preconnect href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+           
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <script> src="css\bootstrap.min.css" </script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        /*background-color: #165633;*/ 
+        background-image: url('https://i.pinimg.com/736x/7e/10/c5/7e10c58b5b5024438090e1be6d18a72b.jpg');
+        font-family: 'Kanit';
+    }
+    .container {
+        padding: 40px; /* ระยะขอบภายใน */
+    
+    }
+    form {
+        background-color: rgb(253, 251, 232); 
+        padding: 20px; /* ระยะขอบภายใน */
+        border: 8px solid #ffd726;
+        border-radius: 10px; /* ขอบมน */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+        min-width: 300px; /* ความกว้างขั้นต่ำ */
+        color: rgb(246, 235, 138);
+    }
+    h1{
+        font-size: 36px;
+        color: #023960;
+        text-align: center; /* กึ่งกลาง */
+        padding: 7px; /* เว้นระยะภายในกรอบ */
+        border: 4px solid #023cdc; 
+        border-radius: 80px; /* มุมมน */
+        background-color: #f1dd6a; 
+        display: inline-block; /* กรอบพอดีกับข้อความ */
+        text-shadow: 3px 3px 5px rgba(251, 252, 255, 0.829); /*x y blur color*/
+        margin-top: 30px;
+    }
+    div.d-flex justify-content-center{
+        padding-top: 20px;
+    }
+    input:hover, textarea:hover {
+    background: #f8e160;; 
+    border-color:#7e7646;
+
+    }
+    input:hover, textarea:hover {
+    color: rgb(77, 82, 65); 
+    }
+
+    input, textarea {
+    transition: background-color 0.8s ease; /*เปลี่ยนสีตอนกรอก*/
+    }
+
+    input:focus, textarea:focus {
+    background-color: #f1dd6a; /* ตอนกรอกข้อมูล */
+    }
+    .error {
+            color: red;
+            font-size: 14px;
+    }
+    .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+    
+</style>
     </head>
     <body>
-        <h1>Workshop #HTML - FORM</h1>
-        <form id="myForm">
-            <table>
-                <tr>
-                    <td><label for="fname">ชื่อ</label></td>
-                    <td><input id="fname" type="text" placeholder="กรุณาป้อนชื่อ" required /><br></td>
-                </tr>
-                <tr>
-                    <td><label for="lname">สกุล</label></td>
-                    <td><input id="lname" type="text" placeholder="กรุณาป้อนนามกุล" required /><br></td>
-                </tr>
-                <tr>
-                    <td><label for="BirthDate">วัน/เดือน/ปีเกิด</label></td>
-                    <td><input id="BirthDate" type="date" required /><br></td>
-                </tr>
-                <tr>
-                    <td><label for="Age">อายุ</label></td>
-                    <td><input id="Age" type="number" placeholder="กรุณาป้อนอายุ" required min="0" step="1" /><br></td>
-                </tr>
-                <tr>
-                    <td>เพศ</td>
-                    <td>
-                        <input type="radio" id="male" name="gender" value="Male" required />
-                        <label for="male">ชาย</label>
-                        <input type="radio" id="female" name="gender" value="Female" />
-                        <label for="female">หญิง</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="myFile">รูป</label></td>
-                    <td><input type="file" id="myFile" accept="image/*" multiple /></td>
-                </tr>
-                <tr>
-                    <td><label for="Address">ที่อยู่</label></td>
-                    <td><textarea id="Address" rows="4" cols="22" placeholder="กรุณาป้อนที่อยู่" required></textarea></td>
-                </tr>
-                <tr>
-                    <td>สีที่ชอบ</td>
-                    <td>
-                        <select name="Colors" required>
-                            <option value="Red" style="color: red;">สีแดง</option>
-                            <option value="Blue" style="color: blue;" >สีน้ำเงิน</option>
-                            <option value="Green" style="color: green;" >สีเขียว</option>
-                            <option value="Yellow" style="color: yellow;">สีเหลือง</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>แนวเพลงที่ชอบ</td>
-                    <td>
-                        <input type="radio" id="type_music1" name="music" value="เพื่อชีวิต" required />
-                        <label for="type_music1">เพื่อชีวิต</label>
-                        <input type="radio" id="type_music2" name="music" value="ลูกทุ่ง" />
-                        <label for="type_music2">ลูกทุ่ง</label>
-                        <input type="radio" id="type_music3" name="music" value="อื่นๆ" />
-                        <label for="type_music3">อื่นๆ</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><br>
-                        <input type="checkbox" id="accept" name="accept" value="Accept" required />
-                        <label for="accept">ยินยอมให้เก็บข้อมูล</label>
-                    </td>
-                </tr>
-            </table>
-            <div class="button-group">
-                <button type="reset">Reset</button>
-                <button type="submit">Submit</button>
+        <div class="d-flex justify-content-center"><h1>WORKSHOP #HTML - FORM</h1></div>
+    </body>
+            
+    <body>
+        <div class="container">
+            <form id="myForm">
+            <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="fname" style="color: #006ebc;"> ชื่อ<span class="text-danger">*</span></label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="fname" placeholder="กรุณาป้อนชื่อ" required />
             </div>
-            <div id="error-message" class="error-message">
-                กรุณากรอกข้อมูลให้ครบถ้วนทุกช่อง
+        </div>
+
+        <div class="row mb-3">   
+                <label class="col-sm-2 col-form-label" for="lname" style="color: #006ebc;"> สกุล<span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+                <input class="form-control" id="lname" type="text" placeholder="กรุณาป้อนนามกุล" required />
             </div>
-        </form>
+        </div>
+
+        <div class="row mb-3">  
+            <label class="col-sm-2 col-form-label" for="BirthDate" style="color: #006ebc;">วัน/เดือน/ปีเกิด<span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+            <input class="form-control" id="BirthDate" type="date" required />
+        </div>
+    </div>
+
+        <div class="row mb-3">  
+            <label class="col-sm-2 col-form-label" for="Age" style="color: #006ebc;">อายุ<span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+            <input class="form-control" id="Age" type="number" placeholder="กรุณาป้อนอายุ" required min="0" step="1" />
+        </div>
+    </div>
+    
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0" style="color: #006ebc;">เพศ</legend>
+            <div class="col-sm-10">
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                  <label class="form-check-label" for="gridRadios1" style="color: #006ebc;">
+                    ชาย
+                  </label>
+                </div>
+                <div class="form-check-inline" style="color: #006ebc;">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2" style="color: #006ebc;">
+                    หญิง
+                  </label>
+                </div>
+        </fieldset>
+
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" for="myFile" style="color: #006ebc;">รูป<span class="text-danger">*</span></label>
+            <div class="col-sm-10">    
+                <input class="form-control" type="file" id="myFile" accept="image/*" multiple />
+            </div>
+        </div>
+        
+
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label" for="Address" style="color: #006ebc;">ที่อยู่<span class="text-danger">*</span></label>
+            <div class="col-sm-10">  
+                <textarea class="form-control" id="Address" rows="4" cols="22" placeholder="กรุณาป้อนที่อยู่" required></textarea>
+            </div>
+        </div>
+
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0" style="color: #006ebc;">สีที่ชอบ<span class="text-danger">*</span></legend>
+            <div class="col-sm-10">
+                <select  class="form-select" aria-label="Default select example">
+                <option value="Red" style="color: red;">สีแดง</option>
+                <option value="Blue" style="color: blue;" >สีน้ำเงิน</option>
+                <option value="Green" style="color: green;" >สีเขียว</option>
+                <option value="Yellow" style="color: yellow;">สีเหลือง</option>
+                    </select>
+                </div>
+        </fieldset>
+
+            
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0" style="color: #006ebc;">แนวเพลงที่ชอบ<span class="text-danger">*</span></legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                        <label class="form-check-label" for="gridRadios1" style="color: #006ebc;">
+                                  เพื่อชีวิต
+                        </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2" style="color: #006ebc;">
+                                  ลูกทุ่ง
+                            </label>
+                            </div>
+                            <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                            <label class="form-check-label" for="gridRadios3" style="color: #006ebc;">
+                                  อื่นๆ
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" style="color: #006ebc;">
+                    ยินยอมให้เก็บข้อมูล
+                </label>
+        </div>
+        <br>
+                
+            
+        <div class="d-flex justify-content-between">
+            <button type="reset" id="resetBtn" class="btn btn-outline-secondary">Reset</button>
+            <button type="submit" id="submitBtn" class="btn btn-outline-success">Submit</button>
+          </div>
+
+          <div id="error-message" class="error-message">
+            กรุณากรอกข้อมูลให้ครบทุกช่อง
+        </div>
+
+            </form>
+        </div>
         <script>
+            document.getElementById("resetBtn").addEventListener("click", function () {
+                location.reload();
+            });
+
             document.getElementById("myForm").addEventListener("submit", function (event) {
+                event.preventDefault();
                 let isValid = true;
                 const errorMessage = document.getElementById("error-message");
-                const requiredFields = document.querySelectorAll(
-                    "input[required], select[required], textarea[required]"
-                );
 
+                const requiredFields = document.querySelectorAll("input[required], select[required], textarea[required]");
                 requiredFields.forEach(function (field) {
                     if (!field.value.trim()) {
                         isValid = false;
@@ -94,12 +221,15 @@
                 });
 
                 if (!isValid) {
-                    errorMessage.style.display = "block"; // แสดงข้อความแจ้งเตือน
-                    event.preventDefault(); // ป้องกันการส่งฟอร์ม
+                    errorMessage.style.display = "block";
+
                 } else {
-                    errorMessage.style.display = "none"; // ซ่อนข้อความแจ้งเตือน
+                    errorMessage.style.display = "none";
+                    
                 }
             });
         </script>
+        </form>
     </body>
 </html>
+
