@@ -21,7 +21,7 @@
             background-color: #4169E1;
         }
         button{
-            color: whitesmoke;
+            color: #F5F5F5;
         }
         .btn-success:hover{
             background-color: #6A5ACD;
