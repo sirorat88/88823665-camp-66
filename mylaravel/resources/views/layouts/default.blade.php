@@ -42,13 +42,15 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="{{ url('public/css/adminlte.css')}}" />
+    <link rel="stylesheet" href=" {{ url('public/css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
-    @yield('content')
+    @yield('styles')
   </head>
   <!--end::Head-->
   <!--begin::Body-->
   <body class="bg-body-secondary">
+    @yield('content')
+    <!-- /.login-box -->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <script
       src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
@@ -68,7 +70,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="{{ url('public/่js/adminlte.js') }}"></script>
+    <script src="{{ url('public/js/adminlte.js') }}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
@@ -92,7 +94,7 @@
     </script>
     <!--end::OverlayScrollbars Configure-->
     <!--end::Script-->
-    {{-- @yield('scripts') --}}
+    @yield('scripts')
   </body>
   <!--end::Body-->
 </html>
