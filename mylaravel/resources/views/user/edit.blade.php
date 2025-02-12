@@ -15,7 +15,7 @@
             @method('put')
             <input type="hidden" name ="id"
             value="{{ $user->id}}">
-            
+
           <div class="input-group mb-3">
             <input type="text" name="name" class="form-control" placeholder="Full Name" />
             <div class="input-group-text"><span class="bi bi-person"></span></div>
@@ -41,26 +41,13 @@
             <!-- /.col -->
             <div class="col-4">
               <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </div>
             <!-- /.col -->
           </div>
-          <!--end::Row-->
-        </form>
-        <div class="social-auth-links text-center mb-3 d-grid gap-2">
-          <p>- OR -</p>
-          <a href="#" class="btn btn-primary">
-            <i class="bi bi-facebook me-2"></i> Sign in using Facebook
-          </a>
-          <a href="#" class="btn btn-danger">
-            <i class="bi bi-google me-2"></i> Sign in using Google+
-          </a>
-        </div>
-        <!-- /.social-auth-links -->
-        <p class="mb-0">
-          <a href="login.html" class="text-center"> I already have a membership </a>
-        </p>
+
+        
       </div>
       <!-- /.register-card-body -->
     </div>
